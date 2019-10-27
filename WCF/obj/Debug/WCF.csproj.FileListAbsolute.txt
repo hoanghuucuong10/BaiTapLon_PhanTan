@@ -1,0 +1,14 @@
+C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\WCF\bin\Debug\WCF.dll.config
+C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\WCF\bin\Debug\WCF.dll
+C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\WCF\bin\Debug\WCF.pdb
+C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\WCF\bin\Debug\DAL.dll
+C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\WCF\bin\Debug\Entities.dll
+C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\WCF\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\WCF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\WCF\bin\Debug\DAL.pdb
+C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\WCF\bin\Debug\Entities.pdb
+C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\WCF\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\WCF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\WCF\obj\Debug\WCF.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\WCF\obj\Debug\WCF.dll
+C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\WCF\obj\Debug\WCF.pdb

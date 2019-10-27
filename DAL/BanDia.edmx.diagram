@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e576a399d3b1438781e7fb32da39d42c" Name="Diagram1">
+        <EntityTypeShape EntityType="BanDiaPhanTanModel.ChiTietHoaDon" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BanDiaPhanTanModel.HoaDon" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BanDiaPhanTanModel.NhanVien" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BanDiaPhanTanModel.sysdiagram" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="BanDiaPhanTanModel.FK_ChiTietHoaDon_HoaDon" ManuallyRouted="false" />
+        <AssociationConnector Association="BanDiaPhanTanModel.FK_HoaDon_NhanVien" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="BanDiaPhanTanModel.Dia" Width="1.5" PointX="9.125" PointY="3.25" />
+        <EntityTypeShape EntityType="BanDiaPhanTanModel.TheLoai" Width="1.5" PointX="8.375" PointY="1.25" />
+        <AssociationConnector Association="BanDiaPhanTanModel.FK_ChiTietHoaDon_Dia" />
+        <AssociationConnector Association="BanDiaPhanTanModel.FK_Dia_TheLoai" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

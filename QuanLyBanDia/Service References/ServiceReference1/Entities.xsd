@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="eNhanVien">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hoTen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="loaiTK" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="maNhanVien" type="xs:int" />
+      <xs:element minOccurs="0" name="mail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="matKhau" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sDT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tenTK" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="eNhanVien" nillable="true" type="tns:eNhanVien" />
+  <xs:complexType name="ArrayOfeNhanVien">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="eNhanVien" nillable="true" type="tns:eNhanVien" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfeNhanVien" nillable="true" type="tns:ArrayOfeNhanVien" />
+  <xs:complexType name="ArrayOfeDia">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="eDia" nillable="true" type="tns:eDia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfeDia" nillable="true" type="tns:ArrayOfeDia" />
+  <xs:complexType name="eDia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HinhAnh" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="donGia" type="xs:double" />
+      <xs:element minOccurs="0" name="maDia" type="xs:int" />
+      <xs:element minOccurs="0" name="maTheLoai" type="xs:int" />
+      <xs:element minOccurs="0" name="soLuong" type="xs:int" />
+      <xs:element minOccurs="0" name="tenDia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tenTheLoai" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="theLoai" nillable="true" type="tns:eTheLoai" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="eDia" nillable="true" type="tns:eDia" />
+  <xs:complexType name="eTheLoai">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="maTheLoai" type="xs:int" />
+      <xs:element minOccurs="0" name="tenTheLoai" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="eTheLoai" nillable="true" type="tns:eTheLoai" />
+</xs:schema>

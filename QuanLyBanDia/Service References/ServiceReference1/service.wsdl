@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Entities" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllNhanVien_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllNhanVien" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllNhanVien_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllNhanVienResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNhanVienByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNhanVienByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNhanVienByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNhanVienByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EditNhanVien_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditNhanVien" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EditNhanVien_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditNhanVienResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddNhanVien_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNhanVien" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddNhanVien_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNhanVienResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteNhanVien_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteNhanVien" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteNhanVien_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteNhanVienResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllDia_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDia" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllDia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllDiaTheLoai_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDiaTheLoai" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllDiaTheLoai_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDiaTheLoaiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDiaByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiaByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDiaByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiaByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EditDia_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditDia" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EditDia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditDiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddDia_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDia" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddDia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDiaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Login" message="tns:IService1_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/LoginResponse" message="tns:IService1_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllNhanVien">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllNhanVien" message="tns:IService1_GetAllNhanVien_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllNhanVienResponse" message="tns:IService1_GetAllNhanVien_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNhanVienByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNhanVienByID" message="tns:IService1_GetNhanVienByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetNhanVienByIDResponse" message="tns:IService1_GetNhanVienByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditNhanVien">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EditNhanVien" message="tns:IService1_EditNhanVien_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EditNhanVienResponse" message="tns:IService1_EditNhanVien_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNhanVien">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddNhanVien" message="tns:IService1_AddNhanVien_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddNhanVienResponse" message="tns:IService1_AddNhanVien_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNhanVien">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteNhanVien" message="tns:IService1_DeleteNhanVien_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteNhanVienResponse" message="tns:IService1_DeleteNhanVien_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllDia" message="tns:IService1_GetAllDia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllDiaResponse" message="tns:IService1_GetAllDia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDiaTheLoai">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllDiaTheLoai" message="tns:IService1_GetAllDiaTheLoai_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllDiaTheLoaiResponse" message="tns:IService1_GetAllDiaTheLoai_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDiaByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDiaByID" message="tns:IService1_GetDiaByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDiaByIDResponse" message="tns:IService1_GetDiaByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditDia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EditDia" message="tns:IService1_EditDia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EditDiaResponse" message="tns:IService1_EditDia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddDia" message="tns:IService1_AddDia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddDiaResponse" message="tns:IService1_AddDia_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IService1/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllNhanVien">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllNhanVien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNhanVienByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetNhanVienByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditNhanVien">
+      <soap:operation soapAction="http://tempuri.org/IService1/EditNhanVien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNhanVien">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddNhanVien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNhanVien">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteNhanVien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDia">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllDia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDiaTheLoai">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllDiaTheLoai" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiaByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDiaByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditDia">
+      <soap:operation soapAction="http://tempuri.org/IService1/EditDia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDia">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddDia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WCF/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
