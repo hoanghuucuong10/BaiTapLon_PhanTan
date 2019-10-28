@@ -35,8 +35,7 @@ namespace WCF
                 maTheLoai = t.MaTheLoai.Value,
                 soLuong = t.SoLuong.Value,
                 donGia = t.DonGia.Value,
-                HinhAnh = t.HinhAnh,
-                theLoai = new eTheLoai { maTheLoai = t.MaTheLoai.Value, tenTheLoai = t.TheLoai.TenTheLoai }
+                HinhAnh = t.HinhAnh
             }).ToList();
             return lst;
         }
@@ -50,8 +49,7 @@ namespace WCF
                 maTheLoai=t.MaTheLoai.Value,
                 soLuong=t.SoLuong.Value,
                 donGia=t.DonGia.Value,
-                HinhAnh=t.HinhAnh,
-                theLoai= new eTheLoai { maTheLoai=t.MaTheLoai.Value,tenTheLoai=t.TheLoai.TenTheLoai}
+                HinhAnh=t.HinhAnh
                 
             }).ToList();
             return lst;
@@ -124,10 +122,7 @@ namespace WCF
                 return null;
         }
 
-        public List<eDia> GetAllDia(string id, string name, string theLoai)
-        {
-            throw new NotImplementedException();
-        }
+    
         #endregion
     }
 }

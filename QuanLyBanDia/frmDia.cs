@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Entities;
+
 using QuanLyBanDia.ServiceReference1;
 
 namespace QuanLyBanDia
@@ -17,14 +17,16 @@ namespace QuanLyBanDia
         Service1Client ser;
         public frmDia()
         {
+           
             InitializeComponent();
             ser = new Service1Client();
-            LoadDatagrib((List<eDia>)ser.GetAllDia("", "", ""));
+            //List<eDia> s = ser.GetAllDia();
+            // LoadDatagrib((List<eDia>)ser.GetAllDia("", "", ""));
         }
-        public void LoadDatagrib(List<eDia> lst)
-        {
-            eDiaBindingSource.DataSource = lst;
-        }
+        //public void LoadDatagrib(List<eDia> lst)
+        //{
+        //    eDiaBindingSource.DataSource = lst;
+        //}
         private void label10_Click(object sender, EventArgs e)
         {
 

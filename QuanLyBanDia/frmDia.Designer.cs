@@ -1,4 +1,6 @@
-﻿namespace QuanLyBanDia
+﻿using QuanLyBanDia.ServiceReference1;
+
+namespace QuanLyBanDia
 {
     partial class frmDia
     {
@@ -333,7 +335,7 @@
             // 
             // eDiaBindingSource
             // 
-            this.eDiaBindingSource.DataSource = typeof(Entities.eDia);
+            this.eDiaBindingSource.DataSource = typeof(eDia);
             // 
             // maDiaDataGridViewTextBoxColumn
             // 
@@ -408,7 +410,7 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eDiaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(eDiaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

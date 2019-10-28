@@ -9,77 +9,361 @@
 //------------------------------------------------------------------------------
 
 namespace QuanLyBanDia.ServiceReference1 {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="eNhanVien", Namespace="http://schemas.datacontract.org/2004/07/Entities")]
+    [System.SerializableAttribute()]
+    public partial class eNhanVien : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string hoTenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string loaiTKField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int maNhanVienField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string mailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string matKhauField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string sDTField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tenTKField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string hoTen {
+            get {
+                return this.hoTenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.hoTenField, value) != true)) {
+                    this.hoTenField = value;
+                    this.RaisePropertyChanged("hoTen");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string loaiTK {
+            get {
+                return this.loaiTKField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.loaiTKField, value) != true)) {
+                    this.loaiTKField = value;
+                    this.RaisePropertyChanged("loaiTK");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int maNhanVien {
+            get {
+                return this.maNhanVienField;
+            }
+            set {
+                if ((this.maNhanVienField.Equals(value) != true)) {
+                    this.maNhanVienField = value;
+                    this.RaisePropertyChanged("maNhanVien");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string mail {
+            get {
+                return this.mailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.mailField, value) != true)) {
+                    this.mailField = value;
+                    this.RaisePropertyChanged("mail");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string matKhau {
+            get {
+                return this.matKhauField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.matKhauField, value) != true)) {
+                    this.matKhauField = value;
+                    this.RaisePropertyChanged("matKhau");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string sDT {
+            get {
+                return this.sDTField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.sDTField, value) != true)) {
+                    this.sDTField = value;
+                    this.RaisePropertyChanged("sDT");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tenTK {
+            get {
+                return this.tenTKField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tenTKField, value) != true)) {
+                    this.tenTKField = value;
+                    this.RaisePropertyChanged("tenTK");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="eDia", Namespace="http://schemas.datacontract.org/2004/07/Entities")]
+    [System.SerializableAttribute()]
+    public partial class eDia : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] HinhAnhField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double donGiaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int maDiaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int maTheLoaiField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int soLuongField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tenDiaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tenTheLoaiField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] HinhAnh {
+            get {
+                return this.HinhAnhField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HinhAnhField, value) != true)) {
+                    this.HinhAnhField = value;
+                    this.RaisePropertyChanged("HinhAnh");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double donGia {
+            get {
+                return this.donGiaField;
+            }
+            set {
+                if ((this.donGiaField.Equals(value) != true)) {
+                    this.donGiaField = value;
+                    this.RaisePropertyChanged("donGia");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int maDia {
+            get {
+                return this.maDiaField;
+            }
+            set {
+                if ((this.maDiaField.Equals(value) != true)) {
+                    this.maDiaField = value;
+                    this.RaisePropertyChanged("maDia");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int maTheLoai {
+            get {
+                return this.maTheLoaiField;
+            }
+            set {
+                if ((this.maTheLoaiField.Equals(value) != true)) {
+                    this.maTheLoaiField = value;
+                    this.RaisePropertyChanged("maTheLoai");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int soLuong {
+            get {
+                return this.soLuongField;
+            }
+            set {
+                if ((this.soLuongField.Equals(value) != true)) {
+                    this.soLuongField = value;
+                    this.RaisePropertyChanged("soLuong");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tenDia {
+            get {
+                return this.tenDiaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tenDiaField, value) != true)) {
+                    this.tenDiaField = value;
+                    this.RaisePropertyChanged("tenDia");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tenTheLoai {
+            get {
+                return this.tenTheLoaiField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tenTheLoaiField, value) != true)) {
+                    this.tenTheLoaiField = value;
+                    this.RaisePropertyChanged("tenTheLoai");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Login", ReplyAction="http://tempuri.org/IService1/LoginResponse")]
-        Entities.eNhanVien Login(string tenTK, string pw);
+        QuanLyBanDia.ServiceReference1.eNhanVien Login(string tenTK, string pw);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Login", ReplyAction="http://tempuri.org/IService1/LoginResponse")]
-        System.Threading.Tasks.Task<Entities.eNhanVien> LoginAsync(string tenTK, string pw);
+        System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eNhanVien> LoginAsync(string tenTK, string pw);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllNhanVien", ReplyAction="http://tempuri.org/IService1/GetAllNhanVienResponse")]
-        Entities.eNhanVien[] GetAllNhanVien(string id, string name);
+        QuanLyBanDia.ServiceReference1.eNhanVien[] GetAllNhanVien(string id, string name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllNhanVien", ReplyAction="http://tempuri.org/IService1/GetAllNhanVienResponse")]
-        System.Threading.Tasks.Task<Entities.eNhanVien[]> GetAllNhanVienAsync(string id, string name);
+        System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eNhanVien[]> GetAllNhanVienAsync(string id, string name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetNhanVienByID", ReplyAction="http://tempuri.org/IService1/GetNhanVienByIDResponse")]
-        Entities.eNhanVien GetNhanVienByID(string id);
+        QuanLyBanDia.ServiceReference1.eNhanVien GetNhanVienByID(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetNhanVienByID", ReplyAction="http://tempuri.org/IService1/GetNhanVienByIDResponse")]
-        System.Threading.Tasks.Task<Entities.eNhanVien> GetNhanVienByIDAsync(string id);
+        System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eNhanVien> GetNhanVienByIDAsync(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/EditNhanVien", ReplyAction="http://tempuri.org/IService1/EditNhanVienResponse")]
-        bool EditNhanVien(Entities.eNhanVien nv);
+        bool EditNhanVien(QuanLyBanDia.ServiceReference1.eNhanVien nv);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/EditNhanVien", ReplyAction="http://tempuri.org/IService1/EditNhanVienResponse")]
-        System.Threading.Tasks.Task<bool> EditNhanVienAsync(Entities.eNhanVien nv);
+        System.Threading.Tasks.Task<bool> EditNhanVienAsync(QuanLyBanDia.ServiceReference1.eNhanVien nv);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddNhanVien", ReplyAction="http://tempuri.org/IService1/AddNhanVienResponse")]
-        bool AddNhanVien(Entities.eNhanVien nv);
+        bool AddNhanVien(QuanLyBanDia.ServiceReference1.eNhanVien nv);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddNhanVien", ReplyAction="http://tempuri.org/IService1/AddNhanVienResponse")]
-        System.Threading.Tasks.Task<bool> AddNhanVienAsync(Entities.eNhanVien nv);
+        System.Threading.Tasks.Task<bool> AddNhanVienAsync(QuanLyBanDia.ServiceReference1.eNhanVien nv);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteNhanVien", ReplyAction="http://tempuri.org/IService1/DeleteNhanVienResponse")]
-        bool DeleteNhanVien(Entities.eNhanVien nv);
+        bool DeleteNhanVien(QuanLyBanDia.ServiceReference1.eNhanVien nv);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteNhanVien", ReplyAction="http://tempuri.org/IService1/DeleteNhanVienResponse")]
-        System.Threading.Tasks.Task<bool> DeleteNhanVienAsync(Entities.eNhanVien nv);
+        System.Threading.Tasks.Task<bool> DeleteNhanVienAsync(QuanLyBanDia.ServiceReference1.eNhanVien nv);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllDia", ReplyAction="http://tempuri.org/IService1/GetAllDiaResponse")]
-        Entities.eDia[] GetAllDia(string id, string name, string theLoai);
+        QuanLyBanDia.ServiceReference1.eDia[] GetAllDia(string id, string name, string theLoai);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllDia", ReplyAction="http://tempuri.org/IService1/GetAllDiaResponse")]
-        System.Threading.Tasks.Task<Entities.eDia[]> GetAllDiaAsync(string id, string name, string theLoai);
+        System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eDia[]> GetAllDiaAsync(string id, string name, string theLoai);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllDiaTheLoai", ReplyAction="http://tempuri.org/IService1/GetAllDiaTheLoaiResponse")]
-        Entities.eDia[] GetAllDiaTheLoai(string theloai);
+        QuanLyBanDia.ServiceReference1.eDia[] GetAllDiaTheLoai(string theloai);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllDiaTheLoai", ReplyAction="http://tempuri.org/IService1/GetAllDiaTheLoaiResponse")]
-        System.Threading.Tasks.Task<Entities.eDia[]> GetAllDiaTheLoaiAsync(string theloai);
+        System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eDia[]> GetAllDiaTheLoaiAsync(string theloai);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDiaByID", ReplyAction="http://tempuri.org/IService1/GetDiaByIDResponse")]
-        Entities.eDia GetDiaByID(string id);
+        QuanLyBanDia.ServiceReference1.eDia GetDiaByID(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDiaByID", ReplyAction="http://tempuri.org/IService1/GetDiaByIDResponse")]
-        System.Threading.Tasks.Task<Entities.eDia> GetDiaByIDAsync(string id);
+        System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eDia> GetDiaByIDAsync(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/EditDia", ReplyAction="http://tempuri.org/IService1/EditDiaResponse")]
-        bool EditDia(Entities.eDia dia);
+        bool EditDia(QuanLyBanDia.ServiceReference1.eDia dia);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/EditDia", ReplyAction="http://tempuri.org/IService1/EditDiaResponse")]
-        System.Threading.Tasks.Task<bool> EditDiaAsync(Entities.eDia dia);
+        System.Threading.Tasks.Task<bool> EditDiaAsync(QuanLyBanDia.ServiceReference1.eDia dia);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddDia", ReplyAction="http://tempuri.org/IService1/AddDiaResponse")]
-        bool AddDia(Entities.eDia dia);
+        bool AddDia(QuanLyBanDia.ServiceReference1.eDia dia);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddDia", ReplyAction="http://tempuri.org/IService1/AddDiaResponse")]
-        System.Threading.Tasks.Task<bool> AddDiaAsync(Entities.eDia dia);
+        System.Threading.Tasks.Task<bool> AddDiaAsync(QuanLyBanDia.ServiceReference1.eDia dia);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -109,91 +393,91 @@ namespace QuanLyBanDia.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public Entities.eNhanVien Login(string tenTK, string pw) {
+        public QuanLyBanDia.ServiceReference1.eNhanVien Login(string tenTK, string pw) {
             return base.Channel.Login(tenTK, pw);
         }
         
-        public System.Threading.Tasks.Task<Entities.eNhanVien> LoginAsync(string tenTK, string pw) {
+        public System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eNhanVien> LoginAsync(string tenTK, string pw) {
             return base.Channel.LoginAsync(tenTK, pw);
         }
         
-        public Entities.eNhanVien[] GetAllNhanVien(string id, string name) {
+        public QuanLyBanDia.ServiceReference1.eNhanVien[] GetAllNhanVien(string id, string name) {
             return base.Channel.GetAllNhanVien(id, name);
         }
         
-        public System.Threading.Tasks.Task<Entities.eNhanVien[]> GetAllNhanVienAsync(string id, string name) {
+        public System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eNhanVien[]> GetAllNhanVienAsync(string id, string name) {
             return base.Channel.GetAllNhanVienAsync(id, name);
         }
         
-        public Entities.eNhanVien GetNhanVienByID(string id) {
+        public QuanLyBanDia.ServiceReference1.eNhanVien GetNhanVienByID(string id) {
             return base.Channel.GetNhanVienByID(id);
         }
         
-        public System.Threading.Tasks.Task<Entities.eNhanVien> GetNhanVienByIDAsync(string id) {
+        public System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eNhanVien> GetNhanVienByIDAsync(string id) {
             return base.Channel.GetNhanVienByIDAsync(id);
         }
         
-        public bool EditNhanVien(Entities.eNhanVien nv) {
+        public bool EditNhanVien(QuanLyBanDia.ServiceReference1.eNhanVien nv) {
             return base.Channel.EditNhanVien(nv);
         }
         
-        public System.Threading.Tasks.Task<bool> EditNhanVienAsync(Entities.eNhanVien nv) {
+        public System.Threading.Tasks.Task<bool> EditNhanVienAsync(QuanLyBanDia.ServiceReference1.eNhanVien nv) {
             return base.Channel.EditNhanVienAsync(nv);
         }
         
-        public bool AddNhanVien(Entities.eNhanVien nv) {
+        public bool AddNhanVien(QuanLyBanDia.ServiceReference1.eNhanVien nv) {
             return base.Channel.AddNhanVien(nv);
         }
         
-        public System.Threading.Tasks.Task<bool> AddNhanVienAsync(Entities.eNhanVien nv) {
+        public System.Threading.Tasks.Task<bool> AddNhanVienAsync(QuanLyBanDia.ServiceReference1.eNhanVien nv) {
             return base.Channel.AddNhanVienAsync(nv);
         }
         
-        public bool DeleteNhanVien(Entities.eNhanVien nv) {
+        public bool DeleteNhanVien(QuanLyBanDia.ServiceReference1.eNhanVien nv) {
             return base.Channel.DeleteNhanVien(nv);
         }
         
-        public System.Threading.Tasks.Task<bool> DeleteNhanVienAsync(Entities.eNhanVien nv) {
+        public System.Threading.Tasks.Task<bool> DeleteNhanVienAsync(QuanLyBanDia.ServiceReference1.eNhanVien nv) {
             return base.Channel.DeleteNhanVienAsync(nv);
         }
         
-        public Entities.eDia[] GetAllDia(string id, string name, string theLoai) {
+        public QuanLyBanDia.ServiceReference1.eDia[] GetAllDia(string id, string name, string theLoai) {
             return base.Channel.GetAllDia(id, name, theLoai);
         }
         
-        public System.Threading.Tasks.Task<Entities.eDia[]> GetAllDiaAsync(string id, string name, string theLoai) {
+        public System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eDia[]> GetAllDiaAsync(string id, string name, string theLoai) {
             return base.Channel.GetAllDiaAsync(id, name, theLoai);
         }
         
-        public Entities.eDia[] GetAllDiaTheLoai(string theloai) {
+        public QuanLyBanDia.ServiceReference1.eDia[] GetAllDiaTheLoai(string theloai) {
             return base.Channel.GetAllDiaTheLoai(theloai);
         }
         
-        public System.Threading.Tasks.Task<Entities.eDia[]> GetAllDiaTheLoaiAsync(string theloai) {
+        public System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eDia[]> GetAllDiaTheLoaiAsync(string theloai) {
             return base.Channel.GetAllDiaTheLoaiAsync(theloai);
         }
         
-        public Entities.eDia GetDiaByID(string id) {
+        public QuanLyBanDia.ServiceReference1.eDia GetDiaByID(string id) {
             return base.Channel.GetDiaByID(id);
         }
         
-        public System.Threading.Tasks.Task<Entities.eDia> GetDiaByIDAsync(string id) {
+        public System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eDia> GetDiaByIDAsync(string id) {
             return base.Channel.GetDiaByIDAsync(id);
         }
         
-        public bool EditDia(Entities.eDia dia) {
+        public bool EditDia(QuanLyBanDia.ServiceReference1.eDia dia) {
             return base.Channel.EditDia(dia);
         }
         
-        public System.Threading.Tasks.Task<bool> EditDiaAsync(Entities.eDia dia) {
+        public System.Threading.Tasks.Task<bool> EditDiaAsync(QuanLyBanDia.ServiceReference1.eDia dia) {
             return base.Channel.EditDiaAsync(dia);
         }
         
-        public bool AddDia(Entities.eDia dia) {
+        public bool AddDia(QuanLyBanDia.ServiceReference1.eDia dia) {
             return base.Channel.AddDia(dia);
         }
         
-        public System.Threading.Tasks.Task<bool> AddDiaAsync(Entities.eDia dia) {
+        public System.Threading.Tasks.Task<bool> AddDiaAsync(QuanLyBanDia.ServiceReference1.eDia dia) {
             return base.Channel.AddDiaAsync(dia);
         }
     }

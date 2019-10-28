@@ -1,8 +1,6 @@
 C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\bin\Debug\QuanLyBanDia.exe.config
 C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\bin\Debug\QuanLyBanDia.exe
 C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\bin\Debug\QuanLyBanDia.pdb
-C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\bin\Debug\Entities.dll
-C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\bin\Debug\Entities.pdb
 C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\obj\Debug\QuanLyBanDia.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\obj\Debug\QuanLyBanDia.frmLogin.resources
 C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\obj\Debug\QuanLyBanDia.frmMain.resources

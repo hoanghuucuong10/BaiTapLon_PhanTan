@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Entities;
+using QuanLyBanDia.ServiceReference1;
+
 namespace QuanLyBanDia
 {
     public partial class frmMain : Form
