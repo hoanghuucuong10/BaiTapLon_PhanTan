@@ -92,7 +92,6 @@
       <xs:sequence>
         <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="theLoai" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -106,7 +105,7 @@
   <xs:element name="GetAllDiaTheLoai">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="theloai" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="theloai" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -156,6 +155,18 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="AddDiaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTheLoai">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTheLoaiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="GetAllTheLoaiResult" nillable="true" type="q12:ArrayOfeTheLoai" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -26,17 +26,18 @@ namespace WCF
 
 
         [OperationContract]
-        List<eDia> GetAllDia(string id, string name, string theLoai);
+        List<eDia> GetAllDia(string id, string name);
         [OperationContract]
-        List<eDia> GetAllDiaTheLoai(string theloai);
+        List<eDia> GetAllDiaTheLoai(int theloai);
         [OperationContract]
-        eDia GetDiaByID(string id);
+        eDia GetDiaByID(int id);
         [OperationContract]
         bool EditDia(eDia dia);
         [OperationContract]
         bool AddDia(eDia dia);
 
-
+        [OperationContract]
+        List<eTheLoai> GetAllTheLoai();
 
     }
 

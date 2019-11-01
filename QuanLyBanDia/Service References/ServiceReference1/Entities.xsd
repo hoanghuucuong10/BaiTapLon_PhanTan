@@ -36,4 +36,17 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="eDia" nillable="true" type="tns:eDia" />
+  <xs:complexType name="ArrayOfeTheLoai">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="eTheLoai" nillable="true" type="tns:eTheLoai" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfeTheLoai" nillable="true" type="tns:ArrayOfeTheLoai" />
+  <xs:complexType name="eTheLoai">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="maTheLoai" type="xs:int" />
+      <xs:element minOccurs="0" name="tenTheLoai" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="eTheLoai" nillable="true" type="tns:eTheLoai" />
 </xs:schema>

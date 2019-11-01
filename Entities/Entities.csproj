@@ -42,7 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="eChiTietHoaDon.cs" />
     <Compile Include="eDia.cs" />
+    <Compile Include="eHoaDon.cs" />
     <Compile Include="eNhanVien.cs" />
     <Compile Include="eTheLoai.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

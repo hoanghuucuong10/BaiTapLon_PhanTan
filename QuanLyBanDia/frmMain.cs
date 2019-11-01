@@ -30,23 +30,70 @@ namespace QuanLyBanDia
                 mnQuanLyTaiKhoan.Enabled = false;
             }
         }
+        #region NguoiDung
         protected override void OnClosing(CancelEventArgs e)
         {
             Application.Exit();
         }
+        private void mnThongTinTaiKhoan_Click(object sender, EventArgs e)
+        {
 
-        private void mnThoat_Click(object sender, EventArgs e)
+        }
+
+        private void mnDoiMatKhau_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mnDangXuat_Click_1(object sender, EventArgs e)
+        {
+            this.frm.Show();
+            this.Close();
+        }
+
+        private void mnThoat_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void mnDangXuat_Click(object sender, EventArgs e)
+        #endregion
+
+        private void mnQLDia_Click(object sender, EventArgs e)
         {
-            frm.Show();
-            this.Close();
+            frmDia frm = new frmDia();
+            frm.TopLevel = false;
+            frm.Visible = true;
+            panel2.Controls.Add(frm);
+        }
+        #region LapHoaDon
+        private void mnHoaDonBanDia_Click(object sender, EventArgs e)
+        {
+
         }
 
-        private void mnDanhSachDia_Click(object sender, EventArgs e)
+        private void mnHoaDonNhapDia_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        private void mnQuanLyTaiKhoan_Click(object sender, EventArgs e)
+        {
+
+        }
+        #region ThongKe
+        private void mnThongKeHoaDon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mnThongKeDia_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        private void thểLoạiToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

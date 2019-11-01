@@ -25,9 +25,9 @@ namespace WCF
         {
             throw new NotImplementedException();
         }
-        public List<eDia> GetAllDia(string id, string name, string theLoai)
+        public List<eDia> GetAllDia(string id, string name)
         {
-            List<eDia> lst = db.Dias.Where(x => x.MaDia.ToString().Contains(id) && x.TenDia.Contains(name)&&(x.TheLoai.TenTheLoai==theLoai || theLoai=="")).Select(t => new eDia
+            List<eDia> lst = db.Dias.Where(x => x.MaDia.ToString().Contains(id) && x.TenDia.Contains(name)).Select(t => new eDia
             {
                 maDia = t.MaDia,
                 tenDia = t.TenDia,
@@ -39,18 +39,18 @@ namespace WCF
             }).ToList();
             return lst;
         }
-        public List<eDia> GetAllDiaTheLoai(string theloai)
+        public List<eDia> GetAllDiaTheLoai(int theloai)
         {
-            List<eDia> lst = db.Dias.Where(x => x.TheLoai.ToString()==theloai).Select(t => new eDia
+            List<eDia> lst = db.Dias.Where(x => x.MaTheLoai == theloai).Select(t => new eDia
             {
-                maDia=t.MaDia,
-                tenDia=t.TenDia,
-                tenTheLoai=t.TheLoai.TenTheLoai,
-                maTheLoai=t.MaTheLoai.Value,
-                soLuong=t.SoLuong.Value,
-                donGia=t.DonGia.Value,
-                HinhAnh=t.HinhAnh
-                
+                maDia = t.MaDia,
+                tenDia = t.TenDia,
+                tenTheLoai = t.TheLoai.TenTheLoai,
+                maTheLoai = t.MaTheLoai.Value,
+                soLuong = t.SoLuong.Value,
+                donGia = t.DonGia.Value,
+                HinhAnh = t.HinhAnh
+
             }).ToList();
             return lst;
         }
@@ -65,7 +65,7 @@ namespace WCF
         }
         public List<eNhanVien> GetAllNhanVien(string id, string name)
         {
-            List<eNhanVien> lst = db.NhanViens.Where(x => x.MaNhanVien.ToString().Contains(id)&&x.HoTen.Contains(name)).Select(t => new eNhanVien
+            List<eNhanVien> lst = db.NhanViens.Where(x => x.MaNhanVien.ToString().Contains(id) && x.HoTen.Contains(name)).Select(t => new eNhanVien
             {
                 maNhanVien = t.MaNhanVien,
                 hoTen = t.HoTen,
@@ -78,14 +78,20 @@ namespace WCF
             return lst;
         }
 
-        public eDia GetDiaByID(string id)
+        public eDia GetDiaByID(int id)
         {
-            throw new NotImplementedException();
+            eDia lst = db.Dias.Where(x => x.MaDia==id).Select(t => new eDia
+            {
+                maDia=t.MaDia,
+                maTheLoai=t.MaTheLoai.Value,
+
+            }).FirstOrDefault();
+            return lst;
         }
 
         public eNhanVien GetNhanVienByID(string id)
         {
-          eNhanVien lst = db.NhanViens.Where(x => x.MaNhanVien.ToString().Contains(id)).Select(t => new eNhanVien
+            eNhanVien lst = db.NhanViens.Where(x => x.MaNhanVien.ToString().Contains(id)).Select(t => new eNhanVien
             {
                 maNhanVien = t.MaNhanVien,
                 hoTen = t.HoTen,
@@ -122,7 +128,17 @@ namespace WCF
                 return null;
         }
 
-    
+        public List<eTheLoai> GetAllTheLoai()
+        {
+            List<eTheLoai> lst = db.TheLoais.Select(t => new eTheLoai
+            {
+                maTheLoai = t.MaTheLoai,
+                tenTheLoai = t.TenTheLoai
+            }).ToList();
+            return lst;
+        }
+
+
         #endregion
     }
 }

@@ -112,6 +112,9 @@
     <None Include="Service References\ServiceReference1\QuanLyBanDia.ServiceReference1.eNhanVien.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\ServiceReference1\QuanLyBanDia.ServiceReference1.eTheLoai.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\ServiceReference1\service.wsdl" />
     <None Include="Service References\ServiceReference1\service.xsd">
       <SubType>Designer</SubType>

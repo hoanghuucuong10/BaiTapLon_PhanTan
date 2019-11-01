@@ -31,52 +31,52 @@ namespace QuanLyBanDia
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDia));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnChonAnh = new System.Windows.Forms.Button();
+            this.numSL = new System.Windows.Forms.NumericUpDown();
+            this.cbTheLoai = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.tbTrinhDo = new System.Windows.Forms.TextBox();
-            this.tbxMK = new System.Windows.Forms.TextBox();
+            this.tbxDonGia = new System.Windows.Forms.TextBox();
+            this.tbxTenDia = new System.Windows.Forms.TextBox();
             this.tbxID = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.tbTenSearch = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.tbxSearch = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.eDiaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbTenDiaSearch = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbMaDiaSearch = new System.Windows.Forms.TextBox();
+            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.imgTre = new System.Windows.Forms.ImageList(this.components);
             this.maDiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenDiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maTheLoaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenTheLoaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maTheLoaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.donGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hinhAnhDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.theLoaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numSL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eDiaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.numSL);
+            this.groupBox1.Controls.Add(this.cbTheLoai);
             this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.btnChonAnh);
             this.groupBox1.Controls.Add(this.btnLuu);
             this.groupBox1.Controls.Add(this.btnHuy);
             this.groupBox1.Controls.Add(this.label7);
@@ -85,32 +85,49 @@ namespace QuanLyBanDia
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.tbTrinhDo);
-            this.groupBox1.Controls.Add(this.tbxMK);
+            this.groupBox1.Controls.Add(this.tbxDonGia);
+            this.groupBox1.Controls.Add(this.tbxTenDia);
             this.groupBox1.Controls.Add(this.tbxID);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 247);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(277, 442);
+            this.groupBox1.Size = new System.Drawing.Size(277, 251);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Đĩa";
             // 
-            // btnChonAnh
+            // numSL
             // 
-            this.btnChonAnh.Location = new System.Drawing.Point(98, 141);
-            this.btnChonAnh.Name = "btnChonAnh";
-            this.btnChonAnh.Size = new System.Drawing.Size(75, 23);
-            this.btnChonAnh.TabIndex = 31;
-            this.btnChonAnh.Text = "Chọn Ảnh";
-            this.btnChonAnh.UseVisualStyleBackColor = true;
+            this.numSL.Location = new System.Drawing.Point(117, 135);
+            this.numSL.Name = "numSL";
+            this.numSL.Size = new System.Drawing.Size(51, 20);
+            this.numSL.TabIndex = 33;
+            // 
+            // cbTheLoai
+            // 
+            this.cbTheLoai.FormattingEnabled = true;
+            this.cbTheLoai.Location = new System.Drawing.Point(117, 109);
+            this.cbTheLoai.Name = "cbTheLoai";
+            this.cbTheLoai.Size = new System.Drawing.Size(139, 21);
+            this.cbTheLoai.TabIndex = 17;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::QuanLyBanDia.Properties.Resources.star__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(102, 95);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnLuu
             // 
             this.btnLuu.BackColor = System.Drawing.Color.White;
-            this.btnLuu.Location = new System.Drawing.Point(159, 364);
+            this.btnLuu.Location = new System.Drawing.Point(157, 203);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(75, 39);
+            this.btnLuu.Size = new System.Drawing.Size(65, 39);
             this.btnLuu.TabIndex = 28;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -120,9 +137,9 @@ namespace QuanLyBanDia
             // btnHuy
             // 
             this.btnHuy.BackColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(31, 364);
+            this.btnHuy.Location = new System.Drawing.Point(33, 203);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(75, 39);
+            this.btnHuy.Size = new System.Drawing.Size(63, 39);
             this.btnHuy.TabIndex = 27;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -137,10 +154,19 @@ namespace QuanLyBanDia
             this.label7.Size = new System.Drawing.Size(0, 13);
             this.label7.TabIndex = 24;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(59, 168);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Đơn Giá:";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 292);
+            this.label5.Location = new System.Drawing.Point(30, 142);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 13);
             this.label5.TabIndex = 25;
@@ -149,7 +175,7 @@ namespace QuanLyBanDia
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 258);
+            this.label1.Location = new System.Drawing.Point(117, 93);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 17;
@@ -158,39 +184,39 @@ namespace QuanLyBanDia
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(39, 224);
+            this.label9.Location = new System.Drawing.Point(117, 54);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 13);
+            this.label9.Size = new System.Drawing.Size(51, 13);
             this.label9.TabIndex = 16;
-            this.label9.Text = "Tên Đía:";
+            this.label9.Text = "Tên Đĩa:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(42, 190);
+            this.label8.Location = new System.Drawing.Point(120, 14);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 13);
             this.label8.TabIndex = 16;
             this.label8.Text = "Mã Đĩa:";
             // 
-            // tbTrinhDo
+            // tbxDonGia
             // 
-            this.tbTrinhDo.Location = new System.Drawing.Point(96, 285);
-            this.tbTrinhDo.Name = "tbTrinhDo";
-            this.tbTrinhDo.Size = new System.Drawing.Size(78, 20);
-            this.tbTrinhDo.TabIndex = 14;
+            this.tbxDonGia.Location = new System.Drawing.Point(117, 161);
+            this.tbxDonGia.Name = "tbxDonGia";
+            this.tbxDonGia.Size = new System.Drawing.Size(105, 20);
+            this.tbxDonGia.TabIndex = 14;
             // 
-            // tbxMK
+            // tbxTenDia
             // 
-            this.tbxMK.Location = new System.Drawing.Point(96, 217);
-            this.tbxMK.Name = "tbxMK";
-            this.tbxMK.Size = new System.Drawing.Size(161, 20);
-            this.tbxMK.TabIndex = 15;
-            this.tbxMK.UseSystemPasswordChar = true;
+            this.tbxTenDia.Location = new System.Drawing.Point(117, 70);
+            this.tbxTenDia.Name = "tbxTenDia";
+            this.tbxTenDia.Size = new System.Drawing.Size(154, 20);
+            this.tbxTenDia.TabIndex = 15;
+            this.tbxTenDia.UseSystemPasswordChar = true;
             // 
             // tbxID
             // 
-            this.tbxID.Location = new System.Drawing.Point(96, 183);
+            this.tbxID.Location = new System.Drawing.Point(117, 30);
             this.tbxID.Name = "tbxID";
             this.tbxID.ReadOnly = true;
             this.tbxID.Size = new System.Drawing.Size(105, 20);
@@ -198,20 +224,30 @@ namespace QuanLyBanDia
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Controls.Add(this.tbTenSearch);
-            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.tbTenDiaSearch);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.tbxSearch);
+            this.groupBox2.Controls.Add(this.tbMaDiaSearch);
             this.groupBox2.Location = new System.Drawing.Point(306, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(722, 442);
+            this.groupBox2.Size = new System.Drawing.Size(722, 486);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh Sách Đĩa";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.BackgroundImage = global::QuanLyBanDia.Properties.Resources.search__1_;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(416, 31);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(24, 24);
+            this.button1.TabIndex = 16;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -223,125 +259,82 @@ namespace QuanLyBanDia
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maDiaDataGridViewTextBoxColumn,
             this.tenDiaDataGridViewTextBoxColumn,
-            this.maTheLoaiDataGridViewTextBoxColumn,
             this.tenTheLoaiDataGridViewTextBoxColumn,
+            this.maTheLoaiDataGridViewTextBoxColumn,
             this.soLuongDataGridViewTextBoxColumn,
             this.donGiaDataGridViewTextBoxColumn,
-            this.hinhAnhDataGridViewImageColumn,
-            this.theLoaiDataGridViewTextBoxColumn});
+            this.hinhAnhDataGridViewImageColumn});
             this.dataGridView1.DataSource = this.eDiaBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 96);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 71);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(690, 331);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(690, 406);
             this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // textBox1
+            // eDiaBindingSource
             // 
-            this.textBox1.Location = new System.Drawing.Point(95, 318);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(127, 20);
-            this.textBox1.TabIndex = 14;
+            this.eDiaBindingSource.DataSource = typeof(QuanLyBanDia.ServiceReference1.eDia);
             // 
-            // label2
+            // tbTenDiaSearch
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 325);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "Đơn Giá:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::QuanLyBanDia.Properties.Resources.star__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(84, 40);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(102, 95);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 32;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.BackgroundImage = global::QuanLyBanDia.Properties.Resources.search__1_;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(611, 58);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(24, 24);
-            this.button1.TabIndex = 16;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // tbTenSearch
-            // 
-            this.tbTenSearch.Location = new System.Drawing.Point(277, 62);
-            this.tbTenSearch.Name = "tbTenSearch";
-            this.tbTenSearch.Size = new System.Drawing.Size(133, 20);
-            this.tbTenSearch.TabIndex = 14;
+            this.tbTenDiaSearch.Location = new System.Drawing.Point(277, 34);
+            this.tbTenDiaSearch.Name = "tbTenDiaSearch";
+            this.tbTenDiaSearch.Size = new System.Drawing.Size(133, 20);
+            this.tbTenDiaSearch.TabIndex = 14;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(226, 69);
+            this.label10.Location = new System.Drawing.Point(226, 41);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(51, 13);
             this.label10.TabIndex = 12;
             this.label10.Text = "Tên Đĩa:";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
-            // 
-            // tbxSearch
-            // 
-            this.tbxSearch.Location = new System.Drawing.Point(73, 62);
-            this.tbxSearch.Name = "tbxSearch";
-            this.tbxSearch.Size = new System.Drawing.Size(133, 20);
-            this.tbxSearch.TabIndex = 15;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 69);
+            this.label3.Location = new System.Drawing.Point(25, 41);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 13;
             this.label3.Text = "Mã Đĩa:";
             // 
-            // label4
+            // tbMaDiaSearch
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(425, 69);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Thể Loại:";
-            this.label4.Click += new System.EventHandler(this.label10_Click);
+            this.tbMaDiaSearch.Location = new System.Drawing.Point(73, 34);
+            this.tbMaDiaSearch.Name = "tbMaDiaSearch";
+            this.tbMaDiaSearch.Size = new System.Drawing.Size(133, 20);
+            this.tbMaDiaSearch.TabIndex = 15;
             // 
-            // comboBox1
+            // treeView1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(478, 61);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 17;
+            this.treeView1.ImageIndex = 0;
+            this.treeView1.ImageList = this.imgTre;
+            this.treeView1.Location = new System.Drawing.Point(12, 12);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.SelectedImageIndex = 0;
+            this.treeView1.Size = new System.Drawing.Size(277, 229);
+            this.treeView1.TabIndex = 10;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
-            // comboBox2
+            // imgTre
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(95, 250);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(139, 21);
-            this.comboBox2.TabIndex = 17;
-            // 
-            // eDiaBindingSource
-            // 
-            this.eDiaBindingSource.DataSource = typeof(eDia);
+            this.imgTre.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgTre.ImageStream")));
+            this.imgTre.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgTre.Images.SetKeyName(0, "REFBARH.ICO");
+            this.imgTre.Images.SetKeyName(1, "caycanh.png");
             // 
             // maDiaDataGridViewTextBoxColumn
             // 
             this.maDiaDataGridViewTextBoxColumn.DataPropertyName = "maDia";
             this.maDiaDataGridViewTextBoxColumn.HeaderText = "maDia";
             this.maDiaDataGridViewTextBoxColumn.Name = "maDiaDataGridViewTextBoxColumn";
+            this.maDiaDataGridViewTextBoxColumn.ReadOnly = true;
             this.maDiaDataGridViewTextBoxColumn.Width = 62;
             // 
             // tenDiaDataGridViewTextBoxColumn
@@ -349,27 +342,32 @@ namespace QuanLyBanDia
             this.tenDiaDataGridViewTextBoxColumn.DataPropertyName = "tenDia";
             this.tenDiaDataGridViewTextBoxColumn.HeaderText = "tenDia";
             this.tenDiaDataGridViewTextBoxColumn.Name = "tenDiaDataGridViewTextBoxColumn";
+            this.tenDiaDataGridViewTextBoxColumn.ReadOnly = true;
             this.tenDiaDataGridViewTextBoxColumn.Width = 63;
-            // 
-            // maTheLoaiDataGridViewTextBoxColumn
-            // 
-            this.maTheLoaiDataGridViewTextBoxColumn.DataPropertyName = "maTheLoai";
-            this.maTheLoaiDataGridViewTextBoxColumn.HeaderText = "maTheLoai";
-            this.maTheLoaiDataGridViewTextBoxColumn.Name = "maTheLoaiDataGridViewTextBoxColumn";
-            this.maTheLoaiDataGridViewTextBoxColumn.Width = 85;
             // 
             // tenTheLoaiDataGridViewTextBoxColumn
             // 
             this.tenTheLoaiDataGridViewTextBoxColumn.DataPropertyName = "tenTheLoai";
             this.tenTheLoaiDataGridViewTextBoxColumn.HeaderText = "tenTheLoai";
             this.tenTheLoaiDataGridViewTextBoxColumn.Name = "tenTheLoaiDataGridViewTextBoxColumn";
+            this.tenTheLoaiDataGridViewTextBoxColumn.ReadOnly = true;
             this.tenTheLoaiDataGridViewTextBoxColumn.Width = 86;
+            // 
+            // maTheLoaiDataGridViewTextBoxColumn
+            // 
+            this.maTheLoaiDataGridViewTextBoxColumn.DataPropertyName = "maTheLoai";
+            this.maTheLoaiDataGridViewTextBoxColumn.HeaderText = "maTheLoai";
+            this.maTheLoaiDataGridViewTextBoxColumn.Name = "maTheLoaiDataGridViewTextBoxColumn";
+            this.maTheLoaiDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maTheLoaiDataGridViewTextBoxColumn.Visible = false;
+            this.maTheLoaiDataGridViewTextBoxColumn.Width = 85;
             // 
             // soLuongDataGridViewTextBoxColumn
             // 
             this.soLuongDataGridViewTextBoxColumn.DataPropertyName = "soLuong";
             this.soLuongDataGridViewTextBoxColumn.HeaderText = "soLuong";
             this.soLuongDataGridViewTextBoxColumn.Name = "soLuongDataGridViewTextBoxColumn";
+            this.soLuongDataGridViewTextBoxColumn.ReadOnly = true;
             this.soLuongDataGridViewTextBoxColumn.Width = 73;
             // 
             // donGiaDataGridViewTextBoxColumn
@@ -377,6 +375,7 @@ namespace QuanLyBanDia
             this.donGiaDataGridViewTextBoxColumn.DataPropertyName = "donGia";
             this.donGiaDataGridViewTextBoxColumn.HeaderText = "donGia";
             this.donGiaDataGridViewTextBoxColumn.Name = "donGiaDataGridViewTextBoxColumn";
+            this.donGiaDataGridViewTextBoxColumn.ReadOnly = true;
             this.donGiaDataGridViewTextBoxColumn.Width = 66;
             // 
             // hinhAnhDataGridViewImageColumn
@@ -384,20 +383,17 @@ namespace QuanLyBanDia
             this.hinhAnhDataGridViewImageColumn.DataPropertyName = "HinhAnh";
             this.hinhAnhDataGridViewImageColumn.HeaderText = "HinhAnh";
             this.hinhAnhDataGridViewImageColumn.Name = "hinhAnhDataGridViewImageColumn";
+            this.hinhAnhDataGridViewImageColumn.ReadOnly = true;
+            this.hinhAnhDataGridViewImageColumn.Visible = false;
             this.hinhAnhDataGridViewImageColumn.Width = 54;
-            // 
-            // theLoaiDataGridViewTextBoxColumn
-            // 
-            this.theLoaiDataGridViewTextBoxColumn.DataPropertyName = "theLoai";
-            this.theLoaiDataGridViewTextBoxColumn.HeaderText = "theLoai";
-            this.theLoaiDataGridViewTextBoxColumn.Name = "theLoaiDataGridViewTextBoxColumn";
-            this.theLoaiDataGridViewTextBoxColumn.Width = 67;
             // 
             // frmDia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1040, 466);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1040, 510);
+            this.Controls.Add(this.treeView1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -406,11 +402,12 @@ namespace QuanLyBanDia
             this.Text = "frmDia";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numSL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(eDiaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eDiaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -418,7 +415,6 @@ namespace QuanLyBanDia
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnChonAnh;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Label label7;
@@ -426,29 +422,29 @@ namespace QuanLyBanDia
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox tbTrinhDo;
-        private System.Windows.Forms.TextBox tbxMK;
+        private System.Windows.Forms.TextBox tbxDonGia;
+        private System.Windows.Forms.TextBox tbxTenDia;
         private System.Windows.Forms.TextBox tbxID;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cbTheLoai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn theLoaiDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox tbTenSearch;
+        private System.Windows.Forms.TextBox tbTenDiaSearch;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbxSearch;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox tbMaDiaSearch;
+        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.ImageList imgTre;
+        private System.Windows.Forms.BindingSource eDiaBindingSource;
+        private System.Windows.Forms.NumericUpDown numSL;
         private System.Windows.Forms.DataGridViewTextBoxColumn maDiaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenDiaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maTheLoaiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenTheLoaiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maTheLoaiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn soLuongDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn donGiaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn hinhAnhDataGridViewImageColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn theLoaiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource eDiaBindingSource;
     }
 }

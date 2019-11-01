@@ -295,6 +295,67 @@ namespace QuanLyBanDia.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="eTheLoai", Namespace="http://schemas.datacontract.org/2004/07/Entities")]
+    [System.SerializableAttribute()]
+    public partial class eTheLoai : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int maTheLoaiField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tenTheLoaiField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int maTheLoai {
+            get {
+                return this.maTheLoaiField;
+            }
+            set {
+                if ((this.maTheLoaiField.Equals(value) != true)) {
+                    this.maTheLoaiField = value;
+                    this.RaisePropertyChanged("maTheLoai");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tenTheLoai {
+            get {
+                return this.tenTheLoaiField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tenTheLoaiField, value) != true)) {
+                    this.tenTheLoaiField = value;
+                    this.RaisePropertyChanged("tenTheLoai");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
@@ -336,16 +397,16 @@ namespace QuanLyBanDia.ServiceReference1 {
         System.Threading.Tasks.Task<bool> DeleteNhanVienAsync(QuanLyBanDia.ServiceReference1.eNhanVien nv);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllDia", ReplyAction="http://tempuri.org/IService1/GetAllDiaResponse")]
-        QuanLyBanDia.ServiceReference1.eDia[] GetAllDia(string id, string name, string theLoai);
+        QuanLyBanDia.ServiceReference1.eDia[] GetAllDia(string id, string name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllDia", ReplyAction="http://tempuri.org/IService1/GetAllDiaResponse")]
-        System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eDia[]> GetAllDiaAsync(string id, string name, string theLoai);
+        System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eDia[]> GetAllDiaAsync(string id, string name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllDiaTheLoai", ReplyAction="http://tempuri.org/IService1/GetAllDiaTheLoaiResponse")]
-        QuanLyBanDia.ServiceReference1.eDia[] GetAllDiaTheLoai(string theloai);
+        QuanLyBanDia.ServiceReference1.eDia[] GetAllDiaTheLoai(int theloai);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllDiaTheLoai", ReplyAction="http://tempuri.org/IService1/GetAllDiaTheLoaiResponse")]
-        System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eDia[]> GetAllDiaTheLoaiAsync(string theloai);
+        System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eDia[]> GetAllDiaTheLoaiAsync(int theloai);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDiaByID", ReplyAction="http://tempuri.org/IService1/GetDiaByIDResponse")]
         QuanLyBanDia.ServiceReference1.eDia GetDiaByID(string id);
@@ -364,6 +425,12 @@ namespace QuanLyBanDia.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddDia", ReplyAction="http://tempuri.org/IService1/AddDiaResponse")]
         System.Threading.Tasks.Task<bool> AddDiaAsync(QuanLyBanDia.ServiceReference1.eDia dia);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllTheLoai", ReplyAction="http://tempuri.org/IService1/GetAllTheLoaiResponse")]
+        QuanLyBanDia.ServiceReference1.eTheLoai[] GetAllTheLoai();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllTheLoai", ReplyAction="http://tempuri.org/IService1/GetAllTheLoaiResponse")]
+        System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eTheLoai[]> GetAllTheLoaiAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -441,19 +508,19 @@ namespace QuanLyBanDia.ServiceReference1 {
             return base.Channel.DeleteNhanVienAsync(nv);
         }
         
-        public QuanLyBanDia.ServiceReference1.eDia[] GetAllDia(string id, string name, string theLoai) {
-            return base.Channel.GetAllDia(id, name, theLoai);
+        public QuanLyBanDia.ServiceReference1.eDia[] GetAllDia(string id, string name) {
+            return base.Channel.GetAllDia(id, name);
         }
         
-        public System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eDia[]> GetAllDiaAsync(string id, string name, string theLoai) {
-            return base.Channel.GetAllDiaAsync(id, name, theLoai);
+        public System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eDia[]> GetAllDiaAsync(string id, string name) {
+            return base.Channel.GetAllDiaAsync(id, name);
         }
         
-        public QuanLyBanDia.ServiceReference1.eDia[] GetAllDiaTheLoai(string theloai) {
+        public QuanLyBanDia.ServiceReference1.eDia[] GetAllDiaTheLoai(int theloai) {
             return base.Channel.GetAllDiaTheLoai(theloai);
         }
         
-        public System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eDia[]> GetAllDiaTheLoaiAsync(string theloai) {
+        public System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eDia[]> GetAllDiaTheLoaiAsync(int theloai) {
             return base.Channel.GetAllDiaTheLoaiAsync(theloai);
         }
         
@@ -479,6 +546,14 @@ namespace QuanLyBanDia.ServiceReference1 {
         
         public System.Threading.Tasks.Task<bool> AddDiaAsync(QuanLyBanDia.ServiceReference1.eDia dia) {
             return base.Channel.AddDiaAsync(dia);
+        }
+        
+        public QuanLyBanDia.ServiceReference1.eTheLoai[] GetAllTheLoai() {
+            return base.Channel.GetAllTheLoai();
+        }
+        
+        public System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eTheLoai[]> GetAllTheLoaiAsync() {
+            return base.Channel.GetAllTheLoaiAsync();
         }
     }
 }
