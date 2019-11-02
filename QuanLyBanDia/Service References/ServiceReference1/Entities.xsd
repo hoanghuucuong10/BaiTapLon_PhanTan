@@ -49,4 +49,37 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="eTheLoai" nillable="true" type="tns:eTheLoai" />
+  <xs:complexType name="eHoaDon">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="loaiHoaDon" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="maHoaDon" type="xs:int" />
+      <xs:element minOccurs="0" name="maNhanVien" type="xs:int" />
+      <xs:element minOccurs="0" name="ngayLapHD" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="tongTien" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="eHoaDon" nillable="true" type="tns:eHoaDon" />
+  <xs:complexType name="ArrayOfeChiTietHoaDon">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="eChiTietHoaDon" nillable="true" type="tns:eChiTietHoaDon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfeChiTietHoaDon" nillable="true" type="tns:ArrayOfeChiTietHoaDon" />
+  <xs:complexType name="eChiTietHoaDon">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="maCTHD" type="xs:int" />
+      <xs:element minOccurs="0" name="maDia" type="xs:int" />
+      <xs:element minOccurs="0" name="maHoaDon" type="xs:int" />
+      <xs:element minOccurs="0" name="soLuong" type="xs:int" />
+      <xs:element minOccurs="0" name="tenDia" type="xs:int" />
+      <xs:element minOccurs="0" name="thanhTien" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="eChiTietHoaDon" nillable="true" type="tns:eChiTietHoaDon" />
+  <xs:complexType name="ArrayOfeHoaDon">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="eHoaDon" nillable="true" type="tns:eHoaDon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfeHoaDon" nillable="true" type="tns:ArrayOfeHoaDon" />
 </xs:schema>

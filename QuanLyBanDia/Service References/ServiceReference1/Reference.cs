@@ -356,6 +356,240 @@ namespace QuanLyBanDia.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="eHoaDon", Namespace="http://schemas.datacontract.org/2004/07/Entities")]
+    [System.SerializableAttribute()]
+    public partial class eHoaDon : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string loaiHoaDonField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int maHoaDonField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int maNhanVienField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime ngayLapHDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double tongTienField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string loaiHoaDon {
+            get {
+                return this.loaiHoaDonField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.loaiHoaDonField, value) != true)) {
+                    this.loaiHoaDonField = value;
+                    this.RaisePropertyChanged("loaiHoaDon");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int maHoaDon {
+            get {
+                return this.maHoaDonField;
+            }
+            set {
+                if ((this.maHoaDonField.Equals(value) != true)) {
+                    this.maHoaDonField = value;
+                    this.RaisePropertyChanged("maHoaDon");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int maNhanVien {
+            get {
+                return this.maNhanVienField;
+            }
+            set {
+                if ((this.maNhanVienField.Equals(value) != true)) {
+                    this.maNhanVienField = value;
+                    this.RaisePropertyChanged("maNhanVien");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime ngayLapHD {
+            get {
+                return this.ngayLapHDField;
+            }
+            set {
+                if ((this.ngayLapHDField.Equals(value) != true)) {
+                    this.ngayLapHDField = value;
+                    this.RaisePropertyChanged("ngayLapHD");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double tongTien {
+            get {
+                return this.tongTienField;
+            }
+            set {
+                if ((this.tongTienField.Equals(value) != true)) {
+                    this.tongTienField = value;
+                    this.RaisePropertyChanged("tongTien");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="eChiTietHoaDon", Namespace="http://schemas.datacontract.org/2004/07/Entities")]
+    [System.SerializableAttribute()]
+    public partial class eChiTietHoaDon : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int maCTHDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int maDiaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int maHoaDonField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int soLuongField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int tenDiaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double thanhTienField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int maCTHD {
+            get {
+                return this.maCTHDField;
+            }
+            set {
+                if ((this.maCTHDField.Equals(value) != true)) {
+                    this.maCTHDField = value;
+                    this.RaisePropertyChanged("maCTHD");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int maDia {
+            get {
+                return this.maDiaField;
+            }
+            set {
+                if ((this.maDiaField.Equals(value) != true)) {
+                    this.maDiaField = value;
+                    this.RaisePropertyChanged("maDia");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int maHoaDon {
+            get {
+                return this.maHoaDonField;
+            }
+            set {
+                if ((this.maHoaDonField.Equals(value) != true)) {
+                    this.maHoaDonField = value;
+                    this.RaisePropertyChanged("maHoaDon");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int soLuong {
+            get {
+                return this.soLuongField;
+            }
+            set {
+                if ((this.soLuongField.Equals(value) != true)) {
+                    this.soLuongField = value;
+                    this.RaisePropertyChanged("soLuong");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int tenDia {
+            get {
+                return this.tenDiaField;
+            }
+            set {
+                if ((this.tenDiaField.Equals(value) != true)) {
+                    this.tenDiaField = value;
+                    this.RaisePropertyChanged("tenDia");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double thanhTien {
+            get {
+                return this.thanhTienField;
+            }
+            set {
+                if ((this.thanhTienField.Equals(value) != true)) {
+                    this.thanhTienField = value;
+                    this.RaisePropertyChanged("thanhTien");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
@@ -409,10 +643,16 @@ namespace QuanLyBanDia.ServiceReference1 {
         System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eDia[]> GetAllDiaTheLoaiAsync(int theloai);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDiaByID", ReplyAction="http://tempuri.org/IService1/GetDiaByIDResponse")]
-        QuanLyBanDia.ServiceReference1.eDia GetDiaByID(string id);
+        QuanLyBanDia.ServiceReference1.eDia GetDiaByID(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDiaByID", ReplyAction="http://tempuri.org/IService1/GetDiaByIDResponse")]
-        System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eDia> GetDiaByIDAsync(string id);
+        System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eDia> GetDiaByIDAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SearchDia", ReplyAction="http://tempuri.org/IService1/SearchDiaResponse")]
+        QuanLyBanDia.ServiceReference1.eDia[] SearchDia(string id, string ten, string theLoai);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SearchDia", ReplyAction="http://tempuri.org/IService1/SearchDiaResponse")]
+        System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eDia[]> SearchDiaAsync(string id, string ten, string theLoai);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/EditDia", ReplyAction="http://tempuri.org/IService1/EditDiaResponse")]
         bool EditDia(QuanLyBanDia.ServiceReference1.eDia dia);
@@ -431,6 +671,24 @@ namespace QuanLyBanDia.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllTheLoai", ReplyAction="http://tempuri.org/IService1/GetAllTheLoaiResponse")]
         System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eTheLoai[]> GetAllTheLoaiAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddHoaDon", ReplyAction="http://tempuri.org/IService1/AddHoaDonResponse")]
+        bool AddHoaDon(QuanLyBanDia.ServiceReference1.eHoaDon x, QuanLyBanDia.ServiceReference1.eChiTietHoaDon[] lst);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddHoaDon", ReplyAction="http://tempuri.org/IService1/AddHoaDonResponse")]
+        System.Threading.Tasks.Task<bool> AddHoaDonAsync(QuanLyBanDia.ServiceReference1.eHoaDon x, QuanLyBanDia.ServiceReference1.eChiTietHoaDon[] lst);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllHoaDon", ReplyAction="http://tempuri.org/IService1/GetAllHoaDonResponse")]
+        QuanLyBanDia.ServiceReference1.eHoaDon[] GetAllHoaDon();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllHoaDon", ReplyAction="http://tempuri.org/IService1/GetAllHoaDonResponse")]
+        System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eHoaDon[]> GetAllHoaDonAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllChiTietHoaDon", ReplyAction="http://tempuri.org/IService1/GetAllChiTietHoaDonResponse")]
+        QuanLyBanDia.ServiceReference1.eChiTietHoaDon[] GetAllChiTietHoaDon();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllChiTietHoaDon", ReplyAction="http://tempuri.org/IService1/GetAllChiTietHoaDonResponse")]
+        System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eChiTietHoaDon[]> GetAllChiTietHoaDonAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -524,12 +782,20 @@ namespace QuanLyBanDia.ServiceReference1 {
             return base.Channel.GetAllDiaTheLoaiAsync(theloai);
         }
         
-        public QuanLyBanDia.ServiceReference1.eDia GetDiaByID(string id) {
+        public QuanLyBanDia.ServiceReference1.eDia GetDiaByID(int id) {
             return base.Channel.GetDiaByID(id);
         }
         
-        public System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eDia> GetDiaByIDAsync(string id) {
+        public System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eDia> GetDiaByIDAsync(int id) {
             return base.Channel.GetDiaByIDAsync(id);
+        }
+        
+        public QuanLyBanDia.ServiceReference1.eDia[] SearchDia(string id, string ten, string theLoai) {
+            return base.Channel.SearchDia(id, ten, theLoai);
+        }
+        
+        public System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eDia[]> SearchDiaAsync(string id, string ten, string theLoai) {
+            return base.Channel.SearchDiaAsync(id, ten, theLoai);
         }
         
         public bool EditDia(QuanLyBanDia.ServiceReference1.eDia dia) {
@@ -554,6 +820,30 @@ namespace QuanLyBanDia.ServiceReference1 {
         
         public System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eTheLoai[]> GetAllTheLoaiAsync() {
             return base.Channel.GetAllTheLoaiAsync();
+        }
+        
+        public bool AddHoaDon(QuanLyBanDia.ServiceReference1.eHoaDon x, QuanLyBanDia.ServiceReference1.eChiTietHoaDon[] lst) {
+            return base.Channel.AddHoaDon(x, lst);
+        }
+        
+        public System.Threading.Tasks.Task<bool> AddHoaDonAsync(QuanLyBanDia.ServiceReference1.eHoaDon x, QuanLyBanDia.ServiceReference1.eChiTietHoaDon[] lst) {
+            return base.Channel.AddHoaDonAsync(x, lst);
+        }
+        
+        public QuanLyBanDia.ServiceReference1.eHoaDon[] GetAllHoaDon() {
+            return base.Channel.GetAllHoaDon();
+        }
+        
+        public System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eHoaDon[]> GetAllHoaDonAsync() {
+            return base.Channel.GetAllHoaDonAsync();
+        }
+        
+        public QuanLyBanDia.ServiceReference1.eChiTietHoaDon[] GetAllChiTietHoaDon() {
+            return base.Channel.GetAllChiTietHoaDon();
+        }
+        
+        public System.Threading.Tasks.Task<QuanLyBanDia.ServiceReference1.eChiTietHoaDon[]> GetAllChiTietHoaDonAsync() {
+            return base.Channel.GetAllChiTietHoaDonAsync();
         }
     }
 }

@@ -15,15 +15,50 @@ namespace WCF
 
         public bool AddDia(eDia dia)
         {
-            throw new NotImplementedException();
-        }
-        public bool DeleteNhanVien(eNhanVien nv)
-        {
-            throw new NotImplementedException();
+            try
+            {
+                Dia t = new Dia();
+                t.MaTheLoai = dia.maTheLoai;
+                t.MaDia = dia.maDia;
+                t.TenDia = dia.tenDia;
+                t.DonGia = dia.donGia;
+                t.SoLuong = dia.soLuong;
+                t.HinhAnh = dia.HinhAnh;
+                db.Dias.Add(t);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+            
         }
         public bool EditDia(eDia dia)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Dia t = db.Dias.Where(x => x.MaDia == dia.maDia).FirstOrDefault();
+                if (t != null)
+                {
+                    t.MaTheLoai = dia.maTheLoai;
+                    t.TenDia = dia.tenDia;
+                    t.DonGia = dia.donGia;
+                    t.SoLuong = dia.soLuong;
+                    t.HinhAnh = dia.HinhAnh;
+                    db.SaveChanges();
+                    return true;
+                }
+                else
+                    return false;
+               
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
         }
         public List<eDia> GetAllDia(string id, string name)
         {
@@ -57,9 +92,36 @@ namespace WCF
         #region NhanVien
         public bool EditNhanVien(eNhanVien nv)
         {
-            throw new NotImplementedException();
+            try
+            {
+                NhanVien t = db.NhanViens.Where(x => x.MaNhanVien == nv.maNhanVien).FirstOrDefault();
+                if (t != null)
+                {
+                    t.MaNhanVien = nv.maNhanVien;
+                    t.MatKhau = nv.matKhau;
+                    t.SDT = nv.sDT;
+                    t.TenTaiKhoan = nv.tenTK;
+                    t.Mail = nv.mail;
+                    t.HoTen = nv.hoTen;
+                   
+                    db.SaveChanges();
+                    return true;
+                }
+                else
+                    return false;
+
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
         }
         public bool AddNhanVien(eNhanVien nv)
+        {
+            throw new NotImplementedException();
+        }
+        public bool DeleteNhanVien(eNhanVien nv)
         {
             throw new NotImplementedException();
         }
@@ -77,13 +139,32 @@ namespace WCF
             }).ToList();
             return lst;
         }
+        public List<eDia> SearchDia(string id, string ten, string theLoai)
+        {
+            List<eDia> lst = db.Dias.Where(x => x.MaDia.ToString().Contains(id) && x.TenDia.Contains(ten) && x.TheLoai.TenTheLoai.Trim().Contains(theLoai)).Select(t => new eDia
+            {
+                maDia = t.MaDia,
+                maTheLoai = t.MaTheLoai.Value,
+                tenDia = t.TenDia,
+                donGia = t.DonGia.Value,
+                tenTheLoai = t.TheLoai.TenTheLoai,
+                HinhAnh = t.HinhAnh,
+                soLuong = t.SoLuong.Value
 
+            }).ToList();
+            return lst;
+        }
         public eDia GetDiaByID(int id)
         {
             eDia lst = db.Dias.Where(x => x.MaDia==id).Select(t => new eDia
             {
                 maDia=t.MaDia,
                 maTheLoai=t.MaTheLoai.Value,
+                tenDia=t.TenDia,
+                donGia=t.DonGia.Value,
+                tenTheLoai=t.TheLoai.TenTheLoai,
+                HinhAnh=t.HinhAnh,
+                soLuong=t.SoLuong.Value
 
             }).FirstOrDefault();
             return lst;
@@ -139,6 +220,42 @@ namespace WCF
         }
 
 
+
+
         #endregion
+
+
+        public bool AddHoaDon(eHoaDon x, List<eChiTietHoaDon> lst)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<eHoaDon> GetAllHoaDon()
+        {
+            List<eHoaDon> lst = db.HoaDons.Select(t => new eHoaDon
+            {
+                loaiHoaDon = t.LoaiHoaDon,
+                maHoaDon = t.MaHoaDon,
+                maNhanVien = t.MaNhanVien.Value,
+                ngayLapHD = t.NgayLapHoaDon.Value,
+                tongTien = t.TongTien.Value
+            }).ToList();
+            return lst;
+        }
+
+
+
+        public List<eChiTietHoaDon> GetAllChiTietHoaDon()
+        {
+            List<eChiTietHoaDon> lst = db.ChiTietHoaDons.Select(t => new eChiTietHoaDon
+            {
+                maCTHD = t.MaChiTietHD,
+                maHoaDon = t.MaHoaDon.Value,
+                maDia = t.MaDia.Value,
+                soLuong = t.SoLuong.Value,
+                thanhTien = t.ThanhTien.Value
+            }).ToList();
+            return lst;
+        }
     }
 }

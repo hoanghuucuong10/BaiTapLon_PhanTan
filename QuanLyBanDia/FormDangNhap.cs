@@ -11,10 +11,10 @@ using QuanLyBanDia.ServiceReference1;
 
 namespace QuanLyBanDia
 {
-    public partial class frmLogin : Form
+    public partial class FormDangNhap : Form
     {
         Service1Client ser;
-        public frmLogin()
+        public FormDangNhap()
         {
             InitializeComponent();
             ser = new Service1Client();
@@ -34,7 +34,7 @@ namespace QuanLyBanDia
             }
             else
             {
-                frmMain frm = new frmMain(nv,this);
+                FormTrangChu frm = new FormTrangChu(nv,this);
                 frm.Show();
                 this.Hide();
             }

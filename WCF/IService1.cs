@@ -32,12 +32,25 @@ namespace WCF
         [OperationContract]
         eDia GetDiaByID(int id);
         [OperationContract]
+        List<eDia> SearchDia(string id, string ten, string theLoai);
+        [OperationContract]
         bool EditDia(eDia dia);
         [OperationContract]
         bool AddDia(eDia dia);
 
         [OperationContract]
         List<eTheLoai> GetAllTheLoai();
+
+
+        [OperationContract]
+        bool AddHoaDon(eHoaDon x, List<eChiTietHoaDon> lst);
+        [OperationContract]
+        List<eHoaDon> GetAllHoaDon();
+
+
+
+        [OperationContract]
+        List<eChiTietHoaDon> GetAllChiTietHoaDon();
 
     }
 

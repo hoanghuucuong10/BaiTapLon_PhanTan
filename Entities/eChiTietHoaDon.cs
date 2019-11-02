@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.ServiceModel;
 namespace Entities
 {
     [DataContract]
@@ -16,6 +16,8 @@ namespace Entities
         public int maHoaDon { get; set; }
         [DataMember]
         public int maDia { get; set; }
+        [DataMember]
+        public int tenDia { get; set; }
         [DataMember]
         public int soLuong { get; set; }
         [DataMember]

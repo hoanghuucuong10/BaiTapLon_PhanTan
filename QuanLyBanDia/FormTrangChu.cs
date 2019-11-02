@@ -11,11 +11,11 @@ using QuanLyBanDia.ServiceReference1;
 
 namespace QuanLyBanDia
 {
-    public partial class frmMain : Form
+    public partial class FormTrangChu : Form
     {
         private eNhanVien nhanVien;
-        private frmLogin frm;
-        public frmMain(eNhanVien nv, frmLogin frm)
+        private FormDangNhap frm;
+        public FormTrangChu(eNhanVien nv, FormDangNhap frm)
         {
             InitializeComponent();
             this.nhanVien = nv;
@@ -24,7 +24,7 @@ namespace QuanLyBanDia
         }
         public void loadForm()
         {
-            if(this.nhanVien.loaiTK.Trim()=="E")
+            if (this.nhanVien.loaiTK.Trim() == "E")
             {
                 //khóa mấy chức năng ko xài được
                 mnQuanLyTaiKhoan.Enabled = false;
@@ -37,7 +37,11 @@ namespace QuanLyBanDia
         }
         private void mnThongTinTaiKhoan_Click(object sender, EventArgs e)
         {
-
+            FormThongTinTaiKhoan frm = new FormThongTinTaiKhoan(nhanVien);
+            frm.TopLevel = false;
+            frm.Visible = true;
+            panel2.Controls.Clear();
+            panel2.Controls.Add(frm);
         }
 
         private void mnDoiMatKhau_Click(object sender, EventArgs e)
@@ -60,19 +64,20 @@ namespace QuanLyBanDia
 
         private void mnQLDia_Click(object sender, EventArgs e)
         {
-            frmDia frm = new frmDia();
+            FormQuanLyDia frm = new FormQuanLyDia();
             frm.TopLevel = false;
             frm.Visible = true;
+            panel2.Controls.Clear();
             panel2.Controls.Add(frm);
         }
         #region LapHoaDon
-        private void mnHoaDonBanDia_Click(object sender, EventArgs e)
+        private void mnLapHD_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void mnHoaDonNhapDia_Click(object sender, EventArgs e)
-        {
+            FormLapHoaDon frm = new FormLapHoaDon(nhanVien);
+            frm.TopLevel = false;
+            frm.Visible = true;
+            panel2.Controls.Clear();
+            panel2.Controls.Add(frm);
 
         }
         #endregion
@@ -91,11 +96,9 @@ namespace QuanLyBanDia
         {
 
         }
+
         #endregion
 
-        private void thểLoạiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }

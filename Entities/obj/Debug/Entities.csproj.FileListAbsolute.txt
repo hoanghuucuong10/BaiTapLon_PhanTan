@@ -2,4 +2,3 @@ C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\Entities\bin\Debug\Entitie
 C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\Entities\bin\Debug\Entities.pdb
 C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\Entities\obj\Debug\Entities.dll
 C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\Entities\obj\Debug\Entities.pdb
-C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache

@@ -1,11 +1,12 @@
 C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\bin\Debug\QuanLyBanDia.exe.config
 C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\bin\Debug\QuanLyBanDia.exe
 C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\bin\Debug\QuanLyBanDia.pdb
-C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\obj\Debug\QuanLyBanDia.csprojResolveAssemblyReference.cache
-C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\obj\Debug\QuanLyBanDia.frmLogin.resources
-C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\obj\Debug\QuanLyBanDia.frmMain.resources
 C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\obj\Debug\QuanLyBanDia.Properties.Resources.resources
 C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\obj\Debug\QuanLyBanDia.csproj.GenerateResource.Cache
 C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\obj\Debug\QuanLyBanDia.exe
 C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\obj\Debug\QuanLyBanDia.pdb
-C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\obj\Debug\QuanLyBanDia.frmDia.resources
+C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\obj\Debug\QuanLyBanDia.FormQuanLyDia.resources
+C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\obj\Debug\QuanLyBanDia.FormDangNhap.resources
+C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\obj\Debug\QuanLyBanDia.FormThongTinTaiKhoan.resources
+C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\obj\Debug\QuanLyBanDia.FormTrangChu.resources
+C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\obj\Debug\QuanLyBanDia.FormLapHoaDon.resources

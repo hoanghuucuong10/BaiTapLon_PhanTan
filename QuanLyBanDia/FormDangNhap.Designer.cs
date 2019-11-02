@@ -1,6 +1,6 @@
 ﻿namespace QuanLyBanDia
 {
-    partial class frmLogin
+    partial class FormDangNhap
     {
         /// <summary>
         /// Required designer variable.
