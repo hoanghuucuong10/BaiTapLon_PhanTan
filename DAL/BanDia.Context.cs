@@ -26,10 +26,12 @@ namespace DAL
         }
     
         public virtual DbSet<ChiTietHoaDon> ChiTietHoaDons { get; set; }
+        public virtual DbSet<Dia> Dias { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<Dia> Dias { get; set; }
         public virtual DbSet<TheLoai> TheLoais { get; set; }
+
+
     }
 }

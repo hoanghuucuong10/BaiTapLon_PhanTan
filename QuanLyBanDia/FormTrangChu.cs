@@ -51,7 +51,7 @@ namespace QuanLyBanDia
 
         private void mnDangXuat_Click_1(object sender, EventArgs e)
         {
-            this.frm.Show();
+            this.frm.Visible=true;
             this.Close();
         }
 
@@ -84,12 +84,17 @@ namespace QuanLyBanDia
 
         private void mnQuanLyTaiKhoan_Click(object sender, EventArgs e)
         {
-
+            FormQuanLyTaiKhoan frm = new FormQuanLyTaiKhoan();
+            frm.TopLevel = false;
+            frm.Visible = true;
+            frm.XemThongTin();
+            panel2.Controls.Clear();
+            panel2.Controls.Add(frm);
         }
         #region ThongKe
         private void mnThongKeHoaDon_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void mnThongKeDia_Click(object sender, EventArgs e)

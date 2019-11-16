@@ -20,7 +20,7 @@ namespace DAL
         public Nullable<int> SoLuong { get; set; }
         public Nullable<double> ThanhTien { get; set; }
     
-        public virtual HoaDon HoaDon { get; set; }
         public virtual Dia Dia { get; set; }
+        public virtual HoaDon HoaDon { get; set; }
     }
 }

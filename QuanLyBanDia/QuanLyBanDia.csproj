@@ -37,6 +37,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -72,6 +73,12 @@
     <Compile Include="FormQuanLyTaiKhoan.Designer.cs">
       <DependentUpon>FormQuanLyTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThongKeHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThongKeHoaDon.Designer.cs">
+      <DependentUpon>FormThongKeHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormThongTinTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +107,12 @@
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLyTaiKhoan.resx">
+      <DependentUpon>FormQuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThongKeHoaDon.resx">
+      <DependentUpon>FormThongKeHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormThongTinTaiKhoan.resx">
       <DependentUpon>FormThongTinTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,8 +129,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\Entities.eChiTietHoaDon.datasource" />
     <None Include="Properties\DataSources\Entities.eDia.datasource" />
+    <None Include="Properties\DataSources\Entities.eHoaDon.datasource" />
     <None Include="Properties\DataSources\Entities.eNhanVien.datasource" />
+    <None Include="Properties\DataSources\Entities.eTheLoai.datasource" />
     <None Include="Properties\DataSources\QuanLyBanDia.ServiceReference1.eChiTietHoaDon.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -131,21 +147,6 @@
     <None Include="Service References\ServiceReference1\Entities.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference1\QuanLyBanDia.ServiceReference1.eChiTietHoaDon1.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\QuanLyBanDia.ServiceReference1.eDia.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\QuanLyBanDia.ServiceReference1.eHoaDon.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\QuanLyBanDia.ServiceReference1.eNhanVien.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\QuanLyBanDia.ServiceReference1.eTheLoai.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\ServiceReference1\service.wsdl" />
     <None Include="Service References\ServiceReference1\service.xsd">
       <SubType>Designer</SubType>
@@ -156,9 +157,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\istockphoto-995719694-612x612.jpg" />
@@ -195,6 +193,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\contract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{3C01F681-9572-4DEF-B699-3215B836CC30}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ServiceReference1\" />

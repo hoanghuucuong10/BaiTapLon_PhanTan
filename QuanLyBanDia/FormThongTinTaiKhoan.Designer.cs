@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnHide = new System.Windows.Forms.Button();
             this.tbMK = new System.Windows.Forms.TextBox();
@@ -40,7 +41,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbPhone = new System.Windows.Forms.TextBox();
+            this.err = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.err)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -167,11 +170,17 @@
             this.tbPhone.Size = new System.Drawing.Size(210, 20);
             this.tbPhone.TabIndex = 30;
             // 
+            // err
+            // 
+            this.err.ContainerControl = this;
+            // 
             // FormThongTinTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::QuanLyBanDia.Properties.Resources.istockphoto_995719694_612x612;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1040, 510);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -179,6 +188,7 @@
             this.Text = "FormThongTinTaiKhoan";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.err)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -197,5 +207,6 @@
         private System.Windows.Forms.Button btnHide;
         private System.Windows.Forms.TextBox tbMK;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ErrorProvider err;
     }
 }

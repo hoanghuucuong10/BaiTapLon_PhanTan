@@ -71,7 +71,7 @@
       <xs:element minOccurs="0" name="maDia" type="xs:int" />
       <xs:element minOccurs="0" name="maHoaDon" type="xs:int" />
       <xs:element minOccurs="0" name="soLuong" type="xs:int" />
-      <xs:element minOccurs="0" name="tenDia" type="xs:int" />
+      <xs:element minOccurs="0" name="tenDia" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="thanhTien" type="xs:double" />
     </xs:sequence>
   </xs:complexType>

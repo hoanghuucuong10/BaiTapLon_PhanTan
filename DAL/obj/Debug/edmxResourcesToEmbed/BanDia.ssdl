@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="MaChiTietHD" />
     </Key>
-    <Property Name="MaChiTietHD" Type="int" Nullable="false" />
+    <Property Name="MaChiTietHD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="MaHoaDon" Type="int" />
     <Property Name="MaDia" Type="int" />
     <Property Name="SoLuong" Type="int" />
@@ -14,7 +14,7 @@
     <Key>
       <PropertyRef Name="MaDia" />
     </Key>
-    <Property Name="MaDia" Type="int" Nullable="false" />
+    <Property Name="MaDia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TenDia" Type="nvarchar" MaxLength="50" />
     <Property Name="MaTheLoai" Type="int" />
     <Property Name="SoLuong" Type="int" />
@@ -25,7 +25,7 @@
     <Key>
       <PropertyRef Name="MaHoaDon" />
     </Key>
-    <Property Name="MaHoaDon" Type="int" Nullable="false" />
+    <Property Name="MaHoaDon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NgayLapHoaDon" Type="date" />
     <Property Name="MaNhanVien" Type="int" />
     <Property Name="TongTien" Type="float" />
@@ -35,7 +35,7 @@
     <Key>
       <PropertyRef Name="MaNhanVien" />
     </Key>
-    <Property Name="MaNhanVien" Type="int" Nullable="false" />
+    <Property Name="MaNhanVien" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
     <Property Name="SDT" Type="nvarchar" MaxLength="12" />
     <Property Name="Mail" Type="nvarchar" MaxLength="50" />
@@ -57,7 +57,7 @@
     <Key>
       <PropertyRef Name="MaTheLoai" />
     </Key>
-    <Property Name="MaTheLoai" Type="int" Nullable="false" />
+    <Property Name="MaTheLoai" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TenTheLoai" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <Association Name="FK_ChiTietHoaDon_Dia">

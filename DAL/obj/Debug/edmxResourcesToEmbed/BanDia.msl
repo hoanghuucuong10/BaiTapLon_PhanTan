@@ -12,6 +12,18 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Dias">
+      <EntityTypeMapping TypeName="BanDiaPhanTanModel.Dia">
+        <MappingFragment StoreEntitySet="Dia">
+          <ScalarProperty Name="MaDia" ColumnName="MaDia" />
+          <ScalarProperty Name="TenDia" ColumnName="TenDia" />
+          <ScalarProperty Name="MaTheLoai" ColumnName="MaTheLoai" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+          <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+          <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="HoaDons">
       <EntityTypeMapping TypeName="BanDiaPhanTanModel.HoaDon">
         <MappingFragment StoreEntitySet="HoaDon">
@@ -47,23 +59,11 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Dias">
-      <EntityTypeMapping TypeName="BanDiaPhanTanModel.Dia">
-        <MappingFragment StoreEntitySet="Dia">
-          <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
-          <ScalarProperty Name="DonGia" ColumnName="DonGia" />
-          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
-          <ScalarProperty Name="MaTheLoai" ColumnName="MaTheLoai" />
-          <ScalarProperty Name="TenDia" ColumnName="TenDia" />
-          <ScalarProperty Name="MaDia" ColumnName="MaDia" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="TheLoais">
       <EntityTypeMapping TypeName="BanDiaPhanTanModel.TheLoai">
         <MappingFragment StoreEntitySet="TheLoai">
-          <ScalarProperty Name="TenTheLoai" ColumnName="TenTheLoai" />
           <ScalarProperty Name="MaTheLoai" ColumnName="MaTheLoai" />
+          <ScalarProperty Name="TenTheLoai" ColumnName="TenTheLoai" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

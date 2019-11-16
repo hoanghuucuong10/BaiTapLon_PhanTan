@@ -17,7 +17,7 @@ namespace Entities
         [DataMember]
         public int maDia { get; set; }
         [DataMember]
-        public int tenDia { get; set; }
+        public string tenDia { get; set; }
         [DataMember]
         public int soLuong { get; set; }
         [DataMember]

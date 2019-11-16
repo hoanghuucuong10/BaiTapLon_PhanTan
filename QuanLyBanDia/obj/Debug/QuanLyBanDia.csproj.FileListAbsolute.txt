@@ -10,3 +10,8 @@ C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\obj\Debug\Qua
 C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\obj\Debug\QuanLyBanDia.FormThongTinTaiKhoan.resources
 C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\obj\Debug\QuanLyBanDia.FormTrangChu.resources
 C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\obj\Debug\QuanLyBanDia.FormLapHoaDon.resources
+C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\obj\Debug\QuanLyBanDia.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\bin\Debug\Entities.dll
+C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\bin\Debug\Entities.pdb
+C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\obj\Debug\QuanLyBanDia.FormQuanLyTaiKhoan.resources
+C:\Users\Admin\Desktop\PhanTan\BaiTapLon\QuanLyBanDia\QuanLyBanDia\obj\Debug\QuanLyBanDia.FormThongKeHoaDon.resources

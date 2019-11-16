@@ -4,12 +4,12 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="BanDiaPhanTanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="BanDiaPhanTanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ChiTietHoaDon">
           <Key>
             <PropertyRef Name="MaChiTietHD" />
           </Key>
-          <Property Name="MaChiTietHD" Type="int" Nullable="false" />
+          <Property Name="MaChiTietHD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MaHoaDon" Type="int" />
           <Property Name="MaDia" Type="int" />
           <Property Name="SoLuong" Type="int" />
@@ -19,7 +19,7 @@
           <Key>
             <PropertyRef Name="MaDia" />
           </Key>
-          <Property Name="MaDia" Type="int" Nullable="false" />
+          <Property Name="MaDia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TenDia" Type="nvarchar" MaxLength="50" />
           <Property Name="MaTheLoai" Type="int" />
           <Property Name="SoLuong" Type="int" />
@@ -30,7 +30,7 @@
           <Key>
             <PropertyRef Name="MaHoaDon" />
           </Key>
-          <Property Name="MaHoaDon" Type="int" Nullable="false" />
+          <Property Name="MaHoaDon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NgayLapHoaDon" Type="date" />
           <Property Name="MaNhanVien" Type="int" />
           <Property Name="TongTien" Type="float" />
@@ -40,7 +40,7 @@
           <Key>
             <PropertyRef Name="MaNhanVien" />
           </Key>
-          <Property Name="MaNhanVien" Type="int" Nullable="false" />
+          <Property Name="MaNhanVien" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
           <Property Name="SDT" Type="nvarchar" MaxLength="12" />
           <Property Name="Mail" Type="nvarchar" MaxLength="50" />
@@ -62,7 +62,7 @@
           <Key>
             <PropertyRef Name="MaTheLoai" />
           </Key>
-          <Property Name="MaTheLoai" Type="int" Nullable="false" />
+          <Property Name="MaTheLoai" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TenTheLoai" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_ChiTietHoaDon_Dia">
@@ -137,7 +137,8 @@
             <End Role="HoaDon" EntitySet="HoaDon" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BanDiaPhanTanModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -145,19 +146,32 @@
           <Key>
             <PropertyRef Name="MaChiTietHD" />
           </Key>
-          <Property Name="MaChiTietHD" Type="Int32" Nullable="false" />
+          <Property Name="MaChiTietHD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MaHoaDon" Type="Int32" />
           <Property Name="MaDia" Type="Int32" />
           <Property Name="SoLuong" Type="Int32" />
           <Property Name="ThanhTien" Type="Double" />
+          <NavigationProperty Name="Dia" Relationship="Self.FK_ChiTietHoaDon_Dia" FromRole="ChiTietHoaDon" ToRole="Dia" />
           <NavigationProperty Name="HoaDon" Relationship="Self.FK_ChiTietHoaDon_HoaDon" FromRole="ChiTietHoaDon" ToRole="HoaDon" />
-          <NavigationProperty Name="Dia" Relationship="BanDiaPhanTanModel.FK_ChiTietHoaDon_Dia" FromRole="ChiTietHoaDon" ToRole="Dia" />
+        </EntityType>
+        <EntityType Name="Dia">
+          <Key>
+            <PropertyRef Name="MaDia" />
+          </Key>
+          <Property Name="MaDia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenDia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MaTheLoai" Type="Int32" />
+          <Property Name="SoLuong" Type="Int32" />
+          <Property Name="DonGia" Type="Double" />
+          <Property Name="HinhAnh" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="ChiTietHoaDons" Relationship="Self.FK_ChiTietHoaDon_Dia" FromRole="Dia" ToRole="ChiTietHoaDon" />
+          <NavigationProperty Name="TheLoai" Relationship="Self.FK_Dia_TheLoai" FromRole="Dia" ToRole="TheLoai" />
         </EntityType>
         <EntityType Name="HoaDon">
           <Key>
             <PropertyRef Name="MaHoaDon" />
           </Key>
-          <Property Name="MaHoaDon" Type="Int32" Nullable="false" />
+          <Property Name="MaHoaDon" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NgayLapHoaDon" Type="DateTime" Precision="0" />
           <Property Name="MaNhanVien" Type="Int32" />
           <Property Name="TongTien" Type="Double" />
@@ -169,7 +183,7 @@
           <Key>
             <PropertyRef Name="MaNhanVien" />
           </Key>
-          <Property Name="MaNhanVien" Type="Int32" Nullable="false" />
+          <Property Name="MaNhanVien" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="SDT" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
           <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -188,6 +202,26 @@
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
+        <EntityType Name="TheLoai">
+          <Key>
+            <PropertyRef Name="MaTheLoai" />
+          </Key>
+          <Property Name="MaTheLoai" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenTheLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Dias" Relationship="Self.FK_Dia_TheLoai" FromRole="TheLoai" ToRole="Dia" />
+        </EntityType>
+        <Association Name="FK_ChiTietHoaDon_Dia">
+          <End Role="Dia" Type="Self.Dia" Multiplicity="0..1" />
+          <End Role="ChiTietHoaDon" Type="Self.ChiTietHoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dia">
+              <PropertyRef Name="MaDia" />
+            </Principal>
+            <Dependent Role="ChiTietHoaDon">
+              <PropertyRef Name="MaDia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_ChiTietHoaDon_HoaDon">
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
           <End Role="ChiTietHoaDon" Type="Self.ChiTietHoaDon" Multiplicity="0..1" />
@@ -197,6 +231,18 @@
             </Principal>
             <Dependent Role="ChiTietHoaDon">
               <PropertyRef Name="MaChiTietHD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Dia_TheLoai">
+          <End Role="TheLoai" Type="Self.TheLoai" Multiplicity="0..1" />
+          <End Role="Dia" Type="Self.Dia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TheLoai">
+              <PropertyRef Name="MaTheLoai" />
+            </Principal>
+            <Dependent Role="Dia">
+              <PropertyRef Name="MaTheLoai" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -214,73 +260,28 @@
         </Association>
         <EntityContainer Name="BanDiaPhanTanEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="ChiTietHoaDons" EntityType="Self.ChiTietHoaDon" />
+          <EntitySet Name="Dias" EntityType="Self.Dia" />
           <EntitySet Name="HoaDons" EntityType="Self.HoaDon" />
           <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="TheLoais" EntityType="Self.TheLoai" />
+          <AssociationSet Name="FK_ChiTietHoaDon_Dia" Association="Self.FK_ChiTietHoaDon_Dia">
+            <End Role="Dia" EntitySet="Dias" />
+            <End Role="ChiTietHoaDon" EntitySet="ChiTietHoaDons" />
+          </AssociationSet>
           <AssociationSet Name="FK_ChiTietHoaDon_HoaDon" Association="Self.FK_ChiTietHoaDon_HoaDon">
             <End Role="HoaDon" EntitySet="HoaDons" />
             <End Role="ChiTietHoaDon" EntitySet="ChiTietHoaDons" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Dia_TheLoai" Association="Self.FK_Dia_TheLoai">
+            <End Role="TheLoai" EntitySet="TheLoais" />
+            <End Role="Dia" EntitySet="Dias" />
           </AssociationSet>
           <AssociationSet Name="FK_HoaDon_NhanVien" Association="Self.FK_HoaDon_NhanVien">
             <End Role="NhanVien" EntitySet="NhanViens" />
             <End Role="HoaDon" EntitySet="HoaDons" />
           </AssociationSet>
-          <EntitySet Name="Dias" EntityType="BanDiaPhanTanModel.Dia" />
-          <EntitySet Name="TheLoais" EntityType="BanDiaPhanTanModel.TheLoai" />
-          <AssociationSet Name="FK_ChiTietHoaDon_Dia" Association="BanDiaPhanTanModel.FK_ChiTietHoaDon_Dia">
-            <End Role="Dia" EntitySet="Dias" />
-            <End Role="ChiTietHoaDon" EntitySet="ChiTietHoaDons" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Dia_TheLoai" Association="BanDiaPhanTanModel.FK_Dia_TheLoai">
-            <End Role="TheLoai" EntitySet="TheLoais" />
-            <End Role="Dia" EntitySet="Dias" />
-          </AssociationSet>
         </EntityContainer>
-        <EntityType Name="Dia">
-          <Key>
-            <PropertyRef Name="MaDia" />
-          </Key>
-          <Property Name="MaDia" Type="Int32" Nullable="false" />
-          <Property Name="TenDia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="MaTheLoai" Type="Int32" />
-          <Property Name="SoLuong" Type="Int32" />
-          <Property Name="DonGia" Type="Double" />
-          <Property Name="HinhAnh" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <NavigationProperty Name="ChiTietHoaDons" Relationship="BanDiaPhanTanModel.FK_ChiTietHoaDon_Dia" FromRole="Dia" ToRole="ChiTietHoaDon" />
-          <NavigationProperty Name="TheLoai" Relationship="BanDiaPhanTanModel.FK_Dia_TheLoai" FromRole="Dia" ToRole="TheLoai" />
-        </EntityType>
-        <EntityType Name="TheLoai">
-          <Key>
-            <PropertyRef Name="MaTheLoai" />
-          </Key>
-          <Property Name="MaTheLoai" Type="Int32" Nullable="false" />
-          <Property Name="TenTheLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Dias" Relationship="BanDiaPhanTanModel.FK_Dia_TheLoai" FromRole="TheLoai" ToRole="Dia" />
-        </EntityType>
-        <Association Name="FK_ChiTietHoaDon_Dia">
-          <End Type="BanDiaPhanTanModel.Dia" Role="Dia" Multiplicity="0..1" />
-          <End Type="BanDiaPhanTanModel.ChiTietHoaDon" Role="ChiTietHoaDon" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Dia">
-              <PropertyRef Name="MaDia" />
-            </Principal>
-            <Dependent Role="ChiTietHoaDon">
-              <PropertyRef Name="MaDia" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Dia_TheLoai">
-          <End Type="BanDiaPhanTanModel.TheLoai" Role="TheLoai" Multiplicity="0..1" />
-          <End Type="BanDiaPhanTanModel.Dia" Role="Dia" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TheLoai">
-              <PropertyRef Name="MaTheLoai" />
-            </Principal>
-            <Dependent Role="Dia">
-              <PropertyRef Name="MaTheLoai" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -295,6 +296,18 @@
                 <ScalarProperty Name="MaDia" ColumnName="MaDia" />
                 <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
                 <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Dias">
+            <EntityTypeMapping TypeName="BanDiaPhanTanModel.Dia">
+              <MappingFragment StoreEntitySet="Dia">
+                <ScalarProperty Name="MaDia" ColumnName="MaDia" />
+                <ScalarProperty Name="TenDia" ColumnName="TenDia" />
+                <ScalarProperty Name="MaTheLoai" ColumnName="MaTheLoai" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+                <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -333,23 +346,11 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Dias">
-            <EntityTypeMapping TypeName="BanDiaPhanTanModel.Dia">
-              <MappingFragment StoreEntitySet="Dia">
-                <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
-                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
-                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
-                <ScalarProperty Name="MaTheLoai" ColumnName="MaTheLoai" />
-                <ScalarProperty Name="TenDia" ColumnName="TenDia" />
-                <ScalarProperty Name="MaDia" ColumnName="MaDia" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="TheLoais">
             <EntityTypeMapping TypeName="BanDiaPhanTanModel.TheLoai">
               <MappingFragment StoreEntitySet="TheLoai">
-                <ScalarProperty Name="TenTheLoai" ColumnName="TenTheLoai" />
                 <ScalarProperty Name="MaTheLoai" ColumnName="MaTheLoai" />
+                <ScalarProperty Name="TenTheLoai" ColumnName="TenTheLoai" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
